@@ -22,7 +22,17 @@ const TopNav = () => {
         Home
       </Link>
 
-      {auth !== null && <a className="nav-link pointer" onClick={logout}>Logout</a>}
+      {auth !== null && (
+        <Link className="nav-link" to="/dashboard">
+          Dashboard
+        </Link>
+      )}
+
+      {auth !== null && (
+        <span className="btn btn-link nav-link pointer" onClick={logout}>
+          Logout
+        </span>
+      )}
 
       {auth === null && (
         <>

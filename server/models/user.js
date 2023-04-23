@@ -21,6 +21,14 @@ const userSchema = new Schema(
       min: 6,
       max: 64,
     },
+    createdAt: {
+      type: Date,
+      default: new Date(),
+    },
+    updatedAt: {
+      type: Date,
+      default: new Date(),
+    },
     stripe_account_id: "",
     stripe_seller: {},
     StripeSession: {},

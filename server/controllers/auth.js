@@ -1,4 +1,4 @@
-import { compare } from "bcrypt";
+// import { compare } from "bcrypt";
 import User from "../models/user";
 import jwt from "jsonwebtoken";
 
@@ -45,6 +45,8 @@ export const login = async (req, res) => {
           _id: user._id,
           name: user.name,
           email: user.email,
+          createdAt: user.createdAt,
+          updatedAt: user.updatedAt,
         },
       });
     });
